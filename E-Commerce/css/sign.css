@@ -1,0 +1,52 @@
+body {
+    background-color: #f3f3f3;
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+}
+
+.main h2 {
+    font-family: cursive;
+}
+
+.main input:not(#sign_up, #sign_in) {
+    width: 60%;
+    margin: 20px auto;
+    border-width: 0 0 1px 0;
+    outline: none;
+    margin-top: 30px;
+    background-color: #f3f3f3;
+}
+
+.main input[type="submit"] {
+    width: 60%;
+    border: 0;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    margin: 20px auto;
+    padding: 6px;
+    transition-property: transform;
+    transition-duration: 0.1s;
+}
+
+.main a {
+    font-size: smaller;
+}
+
+.main input[type="submit"]:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+@media (max-width: 1200px) {
+    .main input:not(#sign_up, #sign_in) {
+        width: 80%;
+    }
+}

@@ -1,0 +1,267 @@
+/* ----- SMOOTH SCROLL ----- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ----- CHANGE THE SCROLL BAR DESIGN ----- */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+}
+
+body {
+    background-color: #f3f3f3;
+}
+
+.count {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    display: none;
+}
+
+.cartProduct {
+    width: 240px;
+    position: absolute;
+    top: 54px;
+    left: -80px;
+    background-color: #e2e2e2;
+    display: none;
+    z-index: 10;
+}
+
+.cartProduct a {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    background-color: #004B91;
+    margin: 10px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.cartProduct a:hover {
+    background-color: #003A66;
+}
+
+.cartProduct p {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-bottom: 1px solid gray;
+}
+
+.cartProduct::after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 88px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent #e2e2e2 transparent;
+}
+
+@media (max-width: 992px) {
+    .count {
+        left: 30px;
+    }
+
+    .cartProduct {
+        top: 50px;
+        left: -3px;
+    }
+
+    .cartProduct::after {
+        left: 0;
+    }
+}
+
+.slide {
+    height: 100vh;
+}
+
+.slide img {
+    height: 100vh;
+}
+
+.searchResult {
+    display: none;
+}
+
+.links img {
+    height: 30px;
+    display: block;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.links a {
+    display: block;
+    text-decoration: none;
+    margin: 20px;
+    width: 110px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ebebeb;
+    border: none;
+    box-shadow: rgba(99, 99, 99,  0.2) 0px 4px 16px -4px;
+    font-family: 'Raleway', sans-serif;
+    color: #aab7c4;
+}
+
+.main {
+    height: 100vh;
+    box-shadow: 0px -7px 20px 0px #bbb;
+}
+
+.carousel-caption {
+    top: 45%;
+    left: 50%;
+}
+
+.main-title {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #084876;
+}
+
+@media (max-width: 992px) {
+    .main-title {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .main-img {
+        height: 75% !important;
+        margin: auto;
+    }
+    .carousel-caption {
+        top: 70%;
+        left: 15%;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-img {
+        height: 60% !important;
+        margin: auto;
+    }
+}
+
+.products {
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.products::-webkit-scrollbar {
+    display: none;
+}
+
+.card img {
+    height: 300px;
+}
+
+.card {
+    display: inline-block;
+    height: 500px;
+    vertical-align: top;
+    max-width: 280px;
+    margin: 1%;
+    white-space: normal;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 10px rgba(0,  0, 0, 0.2), inset 1px 1px 10px rgba(255,255,255, 0.3);
+    transform: scale(1.02);
+}
+
+.card h5, img, span {
+    cursor: pointer;
+}
+
+.card h5:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.footer img {
+    display: block;
+    width: 200px;
+    margin: 50px auto 20px;
+}
+
+.top {
+    display: block;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background-color: #004B91;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.navFooterVerticalRow {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 20px;
+}
+
+.navFooterColHead {
+    color: white;
+    font-size: 23px;
+    margin-left: 30px;
+}
+
+.nav_a {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    color: gray;
+    margin: 10px 0;
+}
+
+.nav_a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.navFooterLinkCol ul li {
+    list-style-type: none;
+}
